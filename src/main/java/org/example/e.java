@@ -24,6 +24,7 @@ class Row {
 
     class E {
         private double weight;
+        private double activateCondtion;
 
         public E(double weight) {
             this.weight = weight;
@@ -38,6 +39,29 @@ class Row {
         public void setWeight(int weight) {
             this.weight = weight;
         }
+       // public boolean activated(){
+            //.
+       /// }
     }
+    private static class Activation{
+        private int actviationKey;
+        public Activation(int equation){
+          this.actviationKey = equation;
+        }
 
+        public int getActviationKey() {
+            return actviationKey;
+        }
+
+        public void setActviationKey(int actviationKey) {
+            this.actviationKey = actviationKey;
+        }
+
+        public double activateCheck(double val){
+            if(this.actviationKey == 0){
+                return (val > 1.0)? 1 : 0;
+            }
+            return 0;
+        }
+    }
 }
