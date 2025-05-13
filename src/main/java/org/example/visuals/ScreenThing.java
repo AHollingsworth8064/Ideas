@@ -17,7 +17,7 @@ public class ScreenThing {
     }
     private class Panel extends  JPanel{
         public Panel(int width, int height){
-
+            ;
         }
 
     }
