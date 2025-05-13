@@ -1,7 +1,8 @@
-package org.example;
+package org.example.visuals;
+
+import org.example.Tuple;
 
 import javax.swing.*;
-import javax.xml.crypto.Data;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +38,7 @@ public class Graph {
         createScreen();
 
     }
-    public Graph(double yAxis, double xAxis, double step, int screenWidth, int screenHeight,Tuple<Double, Double>[] data){
+    public Graph(double yAxis, double xAxis, double step, int screenWidth, int screenHeight, Tuple<Double, Double>[] data){
         this.xAxis = xAxis;
         this.yAxis = yAxis;
         this.step =  step;

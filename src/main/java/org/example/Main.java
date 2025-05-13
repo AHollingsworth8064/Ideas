@@ -1,7 +1,11 @@
 package org.example;
+
+import org.example.visuals.DrawThing;
+import org.example.visuals.Graph;
+
 public class Main {
     public static void main(String[] args) {
-        Graph e = new Graph(500,500,10, 500,500) ;
+       new DrawThing(10,10);
 
 
 }}
