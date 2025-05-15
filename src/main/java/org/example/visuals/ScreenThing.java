@@ -7,41 +7,44 @@ import java.util.List;
 
 //pivot
 public class ScreenThing {
+
     private int height;
     private int width;
     private Panel panel;
     private static final JFrame window = new JFrame("number");
     private DrawThing.Pixel[][] pixels;
 
+
     public ScreenThing(){
         window.setSize(new Dimension(1000,800));
-
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panel = new Panel(32,32);
+        //window.add(panel);
+        window.repaint();
+        window.setVisible(true);
     }
     private class Panel extends  JPanel{
         public Pixel[][] pixels;
-        public HashMap<Color, ArrayList<Pixel>> thingsToColor;
-
+        public HashMap<Color, ArrayList<Pixel>> thingsToColor= new HashMap<>();
+        private int reltiveSideLength;
 
         public Panel(int width, int height){
-            pixels = new Pixel[height][width];
-            ArrayList<Pixel> temp = new ArrayList<>();
-            thingsToColor.put(Color.white, temp);
-            temp = new ArrayList<>();
-            thingsToColor.put(Color.black, temp);
-            temp = new ArrayList<>();
-            thingsToColor.put(Color.gray, temp);
+
+            ArrayList<Pixel> e = new ArrayList<>();
+            thingsToColor.put(colors.black.color,new ArrayList<>());
+            thingsToColor.put(colors.white.color, new ArrayList<>());
+            thingsToColor.put(colors.gray.color, new ArrayList<>());
 
             int screenWidth = ScreenThing.window.getWidth();
-            int reltiveSideLength = screenWidth /width;
+            reltiveSideLength = screenWidth /width;
             int ycor = 0, xcor = 0;
 
             for(int row = 0; row < height; row++){
                 ycor += (int) reltiveSideLength;
                 xcor = 0;
                 for(int col = 0; col < width; col++){
-                    pixels[row][col] = new Pixel(xcor, ycor, reltiveSideLength, reltiveSideLength);
                     xcor += reltiveSideLength;
-                    thingsToColor.get(pixels[row][col].color).add(pixels[row][col]);
+                    thingsToColor.get(colors.white.color).add(new Pixel(xcor, ycor, reltiveSideLength, reltiveSideLength));
                 }
             }
         }
@@ -49,7 +52,9 @@ public class ScreenThing {
         protected void paintComponent(Graphics g) {
             for(Map.Entry< Color, ArrayList<Pixel>> set: thingsToColor.entrySet()){
                 g.setColor(set.getKey());
-                for(set.getValue())
+                for(Pixel pixel: set.getValue()){
+                    g.fillRect(pixel.x,pixel.y,reltiveSideLength,reltiveSideLength);
+                }
             }
         }
 
@@ -70,5 +75,17 @@ public class ScreenThing {
 
         }
 
+    }
+
+}
+enum colors{
+    white(Color.white),
+    black(Color.BLACK),
+    gray(Color.gray);
+
+
+    public final Color color;
+    colors(Color color) {
+        this.color = color;
     }
 }

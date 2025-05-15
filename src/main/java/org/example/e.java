@@ -45,6 +45,7 @@ class Row {
     }
     private static class Activation{
         private int actviationKey;
+        
         public Activation(int equation){
           this.actviationKey = equation;
         }
