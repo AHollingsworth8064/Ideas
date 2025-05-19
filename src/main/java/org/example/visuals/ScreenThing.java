@@ -22,10 +22,16 @@ public class ScreenThing {
     public ScreenThing(){
         window.setSize(new Dimension(1000,800));
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(false);
+
         panel = new Panel(28,28);
         window.add(panel);
+
+        //window.add(new Button(900, 600, colors.black.color, "test", 100,20));
+
         window.repaint();
         window.setVisible(true);
+
         window.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
