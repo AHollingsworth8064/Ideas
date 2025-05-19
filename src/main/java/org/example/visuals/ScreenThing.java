@@ -44,7 +44,7 @@ public class ScreenThing {
                 xcor = 0;
                 for(int col = 0; col < width; col++){
                     xcor += reltiveSideLength;
-                    thingsToColor.get(colors.white.color).add(new Pixel(xcor, ycor, reltiveSideLength, reltiveSideLength));
+                    thingsToColor.get(colors.black.color).add(new Pixel(xcor, ycor, reltiveSideLength, reltiveSideLength));
                 }
             }
         }
