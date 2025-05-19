@@ -7,6 +7,6 @@ import org.example.visuals.ScreenThing;
 public class Main {
     public static void main(String[] args) {
        //new DrawThing(10,10);
-        new ScreenThing();
+        ScreenThing e = new ScreenThing();
 
 }}
