@@ -18,8 +18,6 @@ public class DrawThing implements ActionListener {
         this.width = width;
         this.pixels = new Pixel[height][width];
 
-
-
         for(int row = 0; row < height; row++){
             for(int col = 0;col < width; col++){
                 pixels[row][col] = new Pixel();

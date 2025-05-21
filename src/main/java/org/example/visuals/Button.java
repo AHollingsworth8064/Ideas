@@ -2,26 +2,27 @@ package org.example.visuals;
 
 import javax.swing.*;
 import java.awt.*;
-import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Button extends JButton {
-    private Runnable method;
-    private int xCor, yCor, height,width;
-    private Color color;
-    private String text;
+public class Button {
+    private int xCor;
+    private int yCor;
+    private Color color = colors.white.color;
+    private String text = "";
+    private int width;
+    private int height;
+    private Object called;
+    private static HashMap<Object, ArrayList<ButtonPanel>> buttons;
 
-    public Button(int xCor, int yCor, Color color, String text, int width, int height){
+    private class ButtonPanel extends JPanel{
+        public ButtonPanel(){
+            this.setLayout(new GridLayout());
+        }
 
-
-        this.color = color;
-        this.xCor = xCor;
-        this.yCor = yCor;
-        this.text = text;
-        this.width = width;
-        this.height = height;
-
-        move(xCor,yCor);
-        setSize(new Dimension(200, 200));
-
+        @Override
+        public void paintComponents(Graphics g) {
+            super.paintComponents(g);
+        }
     }
 }
