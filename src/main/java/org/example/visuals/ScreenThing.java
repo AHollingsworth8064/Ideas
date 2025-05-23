@@ -32,6 +32,8 @@ public class ScreenThing {
         window.repaint();
         window.setVisible(true);
 
+        StupidIdea.setUp(window);
+
         window.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
