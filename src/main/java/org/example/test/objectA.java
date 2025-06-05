@@ -37,10 +37,10 @@ public class objectA {
                 tempFile.setReadable(true);
                 reader = new BufferedReader(new FileReader(tempFile));
                 System.out.println((reader.lines().toArray())[stack.getLineNumber()-1] + "file: " + stack.getClassName() +  ", lineNum" + stack.getLineNumber());
+
             } catch (Exception e) {
                 if(!stack.toString().contains("Thread")){
                     System.out.println(stack.getLineNumber() + " , " + e);
-
                 }
            }
 
@@ -49,5 +49,8 @@ public class objectA {
 
 
         return false;
+   }
+   public void wt(){
+
    }
 }

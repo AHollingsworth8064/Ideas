@@ -19,10 +19,10 @@ public class fileInfo {
 
     public static File getFile(Object object){
         StackTraceElement[] thing = Thread.currentThread().getStackTrace();
-        StackTraceElement stack;
         for(StackTraceElement e: thing){
             System.out.println(e);
         }
+
 
 //        for(int i = 0; i < thing.length;i++){
 //            if(object.getClass().getName().equals(thing[i].getClass()) && );

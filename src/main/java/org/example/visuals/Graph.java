@@ -1,6 +1,6 @@
 package org.example.visuals;
 
-import org.example.Tuple;
+import org.example.utils.Tuple;
 
 import javax.swing.*;
 import java.awt.*;
