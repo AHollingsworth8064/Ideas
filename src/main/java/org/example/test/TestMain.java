@@ -24,7 +24,7 @@ public class TestMain {
         objectA pi = new objectA(1);
 //        pi.check(e);
         JFrame q = new JFrame();
-        pi.wt();
+        pi.wt(q);
 
 
 

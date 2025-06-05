@@ -50,7 +50,7 @@ public class objectA {
 
         return false;
    }
-   public void wt(){
+   public void wt(Object object){
 
    }
 }
