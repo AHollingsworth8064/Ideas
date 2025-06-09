@@ -1,12 +1,9 @@
 package org.example.test;
 
 
-import org.example.fileNav.fileInfo;
+import org.example.FileHelper.fileInfo;
 
 import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.nio.file.Path;
 
 public class TestMain {
 
@@ -19,7 +16,7 @@ public class TestMain {
         System.out.println(theta.getAbsolutePath() + " , " + theta.exists());
         objectB e = new objectB();
         objectA pi = new objectA(1);
-        fileInfo.getFile(e);
+//        fileInfo.getFile(e);
         pi.check(e);
 
 

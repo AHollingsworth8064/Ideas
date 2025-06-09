@@ -1,4 +1,4 @@
-package org.example;
+package org.example.AI;
 
 class Row {
     public E[] es;

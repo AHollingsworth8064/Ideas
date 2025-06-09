@@ -1,6 +1,8 @@
 package org.example.test;
 
 
+import org.example.FileHelper.fileInfo;
+
 import javax.annotation.processing.SupportedSourceVersion;
 import java.awt.*;
 import java.io.*;
@@ -10,7 +12,7 @@ import java.nio.file.Path;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class objectA {
+public class objectA{
    private String name;
    private objectB localB;
 
@@ -21,33 +23,7 @@ public class objectA {
 
    }
    public boolean check(objectB b){
-       StackTraceElement[] thing = Thread.currentThread().getStackTrace();
-       BufferedReader reader;
-       String classPath;
-       int l;
-       for(StackTraceElement stack: thing){;
-            File tempFile = new File("");
-            String tempUrl =tempFile.getAbsolutePath().replace(tempFile.getName(), "")
-                    + "/src/main/java/"
-                    + stack.toString().substring(0, stack.toString().indexOf(stack.getMethodName())-1).replace(".","/")
-                    +".java";
-
-            try {
-                tempFile = new File(tempUrl);
-                tempFile.setReadable(true);
-                reader = new BufferedReader(new FileReader(tempFile));
-                System.out.println((reader.lines().toArray())[stack.getLineNumber()-1] + "file: " + stack.getClassName() +  ", lineNum" + stack.getLineNumber());
-            } catch (Exception e) {
-                if(!stack.toString().contains("Thread")){
-                    System.out.println(stack.getLineNumber() + " , " + e);
-
-                }
-           }
-
-
-       }
-
-
+       fileInfo.getMethodCaller();
         return false;
    }
 }

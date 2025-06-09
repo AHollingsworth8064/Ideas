@@ -1,7 +1,6 @@
 package org.example;
 
 import org.example.visuals.*;
-import org.example.visuals.Button;
 
 import javax.rmi.ssl.SslRMIClientSocketFactory;
 import java.awt.*;
