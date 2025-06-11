@@ -19,11 +19,17 @@ public class objectA{
     public objectA(int num){
         //this.localB = new objectB(2);
    }
-   public void test(objectB e){
-
+   public <T> void test(Class<T> e){
+        System.out.println(e.getName());
+   }
+   public void test(Object obj){
+        System.out.println(obj.getClass().getName());
    }
    public boolean check(objectB b){
-       fileInfo.getMethodCaller();
+     System.out.println(
+             objectB.class.getResource("objectB.class")
+     );
+     b.test();
         return false;
    }
 }

@@ -16,7 +16,7 @@ public class TestMain {
         System.out.println(theta.getAbsolutePath() + " , " + theta.exists());
         objectB e = new objectB();
         objectA pi = new objectA(1);
-//        fileInfo.getFile(e);
+//        fileInfo.getMethodCaller(e);
         pi.check(e);
 
 

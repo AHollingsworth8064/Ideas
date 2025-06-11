@@ -1,5 +1,8 @@
 package org.example.test;
 
+import org.example.FileHelper.fileInfo;
+import org.example.utils.CustomException;
+
 import java.io.File;
 
 public class objectB {
@@ -10,10 +13,11 @@ public class objectB {
 
 
     public void test() {
-        System.out.println(this.test);
-        File test = new File("nope");
-        System.out.println(test.exists()
-        );
+        try {
+            System.out.println(fileInfo.getMethodCaller().getName());
+        } catch (CustomException e) {
+            System.out.println("failure at e");
+        }
     }
 
 
