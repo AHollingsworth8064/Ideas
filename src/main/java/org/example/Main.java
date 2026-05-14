@@ -1,21 +1,9 @@
 package org.example;
 
-import org.example.visuals.*;
-
-import javax.rmi.ssl.SslRMIClientSocketFactory;
-import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.Writer;
-import java.lang.reflect.Array;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import org.example.unOrganized.Screen;
 
 public class Main {
     public static void main(String[] args) {
-        File e = new File("/Users/ahollingsworth8064/IdeaProjects/Ideas/nope");
-
-        //ScreenThing e = new ScreenThing();
+        Screen test = new Screen();
 
 }}
